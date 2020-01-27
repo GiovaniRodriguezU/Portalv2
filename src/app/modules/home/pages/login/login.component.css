@@ -1,0 +1,27 @@
+.container {
+    height: 100vh;
+    background-image: url(../../../../../assets/img/login_bg.jpg);
+    background-size: cover;
+}
+
+.header-logo {
+    height: 40px;
+    width: 120px;
+}
+
+.mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btn-login {
+    width: 100%;
+}
+
+.mat-card-header {
+    margin-bottom: 20px;
+}
+
+.statement {
+    font-size: 12px;
+}
