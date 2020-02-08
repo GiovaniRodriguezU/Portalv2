@@ -27,7 +27,7 @@ export class AuthenticationService {
     await this.afAuth.auth.signInWithEmailAndPassword(email, password);
     let uid = this.afAuth.auth.currentUser.uid
     console.log(uid)
-    return this.router.navigate[`profile,${uid}`]
+    return this.router.navigate['/communication']
   }
 
   async signOut() {

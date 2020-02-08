@@ -1,1 +1,32 @@
-<p>create-communication works!</p>
+<form #newCommunication="ngForm" (submit)="onSubmit(event$)">
+    <h1 mat-dialog-title>Nueva Comunicacion</h1>
+    <mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Titulo</mat-label>
+            <input matInput id="title" name="title" ngModel>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Descripcion</mat-label>
+            <textarea matInput id="description" name="description" ngModel></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Seleccionar Cuenta</mat-label>
+            <mat-select id="account" name="account" ngModel>
+                <mat-option *ngFor="let account of accounts" [value]="account">{{account}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button (click)="fileInput.click()" color="warm">Selecciona Imagen</button>
+        <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+        <br>
+        <br>
+        <hr>
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancelar</button>
+        <button mat-button mat-dialog-close type="submit">Publicar</button>
+    </mat-dialog-actions>
+</form>

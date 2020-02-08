@@ -29,6 +29,19 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
+import { MatListModule } from '@angular/material/list';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+
+
+
+
+
+
+// ANgular CDK
+import { ScrollingModule } from '@angular/cdk/scrolling';
+
+
 
 import { HomeComponent } from './modules/home/home.component';
 import { LoginComponent } from './modules/home/pages/login/login.component';
@@ -53,6 +66,7 @@ import { CreateCommunicationComponent } from './modules/home/components/communic
     CommunicationItemComponent,
     CreateCommunicationComponent,
   ],
+  entryComponents: [CreateCommunicationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -76,7 +90,13 @@ import { CreateCommunicationComponent } from './modules/home/components/communic
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatListModule,
+    MatDialogModule,
+    MatSelectModule,
+
+    // Angular CDK
+    ScrollingModule
   ],
   providers: [AngularFireAuthGuard, AngularFireDatabase],
   bootstrap: [AppComponent]

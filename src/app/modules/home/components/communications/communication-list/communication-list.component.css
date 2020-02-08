@@ -1,6 +1,7 @@
 .container {
     margin-top: 15px;
     margin-left: 15px;
+
 }
 
 .uploadedBy-photo {
@@ -12,3 +13,13 @@
 .mat-icon {
     font-size: 28px;
 }
+
+.mat-card-image {
+    height: 300px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
