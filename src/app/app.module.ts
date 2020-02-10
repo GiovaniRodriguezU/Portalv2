@@ -15,8 +15,6 @@ import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -33,16 +31,11 @@ import { MatListModule } from '@angular/material/list';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 
-
-
-
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 // ANgular CDK
 import { ScrollingModule } from '@angular/cdk/scrolling';
-
-
-
 import { HomeComponent } from './modules/home/home.component';
 import { LoginComponent } from './modules/home/pages/login/login.component';
 import { environment } from 'src/environments/environment';

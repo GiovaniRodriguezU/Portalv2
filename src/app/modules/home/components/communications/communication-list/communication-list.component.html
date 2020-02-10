@@ -1,37 +1,43 @@
-<div *ngIf="communicationData.communication$ | async as communications">
-    <div class="container" fxLayout="row" fxlayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="left left">
-        <div fxFlex="33%">
-            <mat-toolbar color="primary">
-                <span>Comunicaciones</span>
-                <div class="spacer"></div>
-                <button mat-icon-button (click)="openDialog()">
-                    <mat-icon>add</mat-icon>
-                </button>
-            </mat-toolbar>
-            <mat-card>
-                <div fxLayout="column" fxLayoutGap="0.8%">
-                    <mat-nav-list>
-                        <mat-list-item *ngFor="let comm of communications">
-                            <img matListAvatar [src]="comm.uploadedByPhotoURL" alt="...">
-                            <h2 matLine>{{comm.title}} </h2>
-                            <p matLine>
-                                <span> subject </span>
-                                <span class="demo-2"> Content </span>
-                            </p>
-                            <button mat-icon-button>
-                                <mat-icon color="primary" [matBadge]="comm.likesCount" matBadgeColor="warn" matBadgeSize="small">favorite_border</mat-icon>
-                            </button>
-                            <button mat-icon-button [matMenuTriggerFor]="communicationMenu">
-                                <mat-icon color="primary">more_vert</mat-icon>
-                            </button>
-                            <mat-menu #communicationMenu="matMenu">
-                                <button mat-menu-item>Settings</button>
-                                <button mat-menu-item>Help</button>
-                              </mat-menu>
-                        </mat-list-item>
-                    </mat-nav-list>
-                </div>
-            </mat-card>
-        </div>
+<div class="container main-container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.8%" fxLayoutAlign="start start">
+    <div fxFlex="33" *ngIf="communicationData.communication$ | async as communications">
+        <mat-toolbar color="primary">
+            <span>Comunicaciones</span>
+            <div class="spacer"></div>
+            <button mat-icon-button (click)="openDialog()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </mat-toolbar>
+        <mat-card>
+            <div fxLayout="column" fxLayoutGap="0.8%">
+                <mat-nav-list>
+                    <mat-list-item *ngFor="let comm of communications">
+                        <img matListAvatar [src]="comm.uploadedByPhotoURL" alt="...">
+                        <h2 matLine>{{comm.title}} </h2>
+                        <p matLine>
+                            <span> subject </span>
+                            <span class="demo-2"> Content </span>
+                        </p>
+                        <button mat-icon-button>
+                            <mat-icon color="primary" [matBadge]="comm.likesCount" matBadgeColor="warn"
+                                matBadgeSize="small">favorite_border</mat-icon>
+                        </button>
+                        <button mat-icon-button [matMenuTriggerFor]="communicationMenu">
+                            <mat-icon color="primary">more_vert</mat-icon>
+                        </button>
+                        <mat-menu #communicationMenu="matMenu">
+                            <button mat-menu-item>Settings</button>
+                            <button mat-menu-item>Help</button>
+                        </mat-menu>
+                    </mat-list-item>
+                </mat-nav-list>
+            </div>
+        </mat-card>
+    </div>
+    <div fxFlex="66">
+        <mat-toolbar color="primary">
+            <span>FirstRow</span>
+        </mat-toolbar>
+        <mat-card>
+        </mat-card>
     </div>
 </div>
