@@ -28,8 +28,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatSelectModule} from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -44,6 +44,9 @@ import { CommunicationsComponent } from './modules/home/components/communication
 import { CommunicationListComponent } from './modules/home/components/communications/communication-list/communication-list.component';
 import { CommunicationItemComponent } from './modules/home/components/communications/communicationList/communication-item/communication-item.component';
 import { CreateCommunicationComponent } from './modules/home/components/communications/create-communication/create-communication.component';
+import { PayrollComponent } from './modules/home/components/finanze/payroll/payroll.component';
+import { TicketsComponent } from './modules/home/components/finanze/tickets/tickets.component';
+
 
 
 
@@ -58,6 +61,9 @@ import { CreateCommunicationComponent } from './modules/home/components/communic
     CommunicationListComponent,
     CommunicationItemComponent,
     CreateCommunicationComponent,
+    PayrollComponent,
+    TicketsComponent
+
   ],
   entryComponents: [CreateCommunicationComponent],
   imports: [

@@ -42,7 +42,7 @@
           <mat-icon>person</mat-icon>
           <span>Perfil</span>
         </button>
-        <button mat-button color="primary" class="margin-right">
+        <button mat-button color="primary" class="margin-right" [routerLink]="[ '/payroll']">
           <mat-icon>attach_money</mat-icon>
           <span>Nomina</span>
         </button>
@@ -58,7 +58,7 @@
   <mat-sidenav-content>
 
     <!-- Header Toolbar -->
-    <mat-toolbar color="primary" *ngIf="auth.user$ | async as user">
+    <mat-toolbar color="primary" *ngIf="auth.user$ | async as user" class="toolbar-nav">
 
       <!-- sidenav toggle -->
       <button mat-icon-button (click)="sidenav.toggle()">
@@ -99,7 +99,7 @@
     </mat-toolbar>
 
     <!-- Main Router Content -->
-    <router-outlet></router-outlet>
+    <router-outlet class="main-content"></router-outlet>
 
   </mat-sidenav-content>
 

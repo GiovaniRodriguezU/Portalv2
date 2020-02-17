@@ -23,15 +23,15 @@ export class AuthenticationService {
       })
     );
   }
-  async signIn(email: string, password:string) {
+  async signIn(email: string, password: string) {
     await this.afAuth.auth.signInWithEmailAndPassword(email, password);
     let uid = this.afAuth.auth.currentUser.uid
     console.log(uid)
-    return this.router.navigate['/communication']
+    return this.router.navigate(['/communication']);
   }
 
   async signOut() {
     await this.afAuth.auth.signOut()
-    return this.router.navigate['/']
+    return this.router.navigate(['/']);
   }
 }

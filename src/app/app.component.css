@@ -69,3 +69,10 @@
 .toolbar-icon {
     margin-right: 10px;
 }
+
+.toolbar-nav {
+    position: sticky;
+    position: sticky;
+    z-index: 1;
+}
+
