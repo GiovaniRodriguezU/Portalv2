@@ -36,16 +36,16 @@ import { MatInputModule } from '@angular/material/input';
 
 // ANgular CDK
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { HomeComponent } from './modules/home/home.component';
-import { LoginComponent } from './modules/home/pages/login/login.component';
+
 import { environment } from 'src/environments/environment';
-import { ProfileComponent } from './modules/home/pages/profile/profile.component';
-import { CommunicationsComponent } from './modules/home/components/communications/communications.component';
-import { CommunicationListComponent } from './modules/home/components/communications/communication-list/communication-list.component';
-import { CommunicationItemComponent } from './modules/home/components/communications/communicationList/communication-item/communication-item.component';
-import { CreateCommunicationComponent } from './modules/home/components/communications/create-communication/create-communication.component';
-import { PayrollComponent } from './modules/home/components/finanze/payroll/payroll.component';
-import { TicketsComponent } from './modules/home/components/finanze/tickets/tickets.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { CommunicationsComponent } from './components/communications/communications.component';
+import { CommunicationListComponent } from './components/communications/communication-list/communication-list.component';
+import { CommunicationItemComponent } from './components/communications/communicationList/communication-item/communication-item.component';
+import { CreateCommunicationComponent } from './components/communications/create-communication/create-communication.component';
+import { PayrollComponent } from './components/finanze/payroll/payroll.component';
+import { TicketsComponent } from './components/tickets/tickets.component';
 
 
 
@@ -54,7 +54,6 @@ import { TicketsComponent } from './modules/home/components/finanze/tickets/tick
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     LoginComponent,
     ProfileComponent,
     CommunicationsComponent,
