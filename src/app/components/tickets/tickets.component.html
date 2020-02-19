@@ -1,1 +1,16 @@
-<p>tickets works!</p>
+<div class="container">
+
+    <div fxLayout="row" fxLayoutGap="gappx" fxLayoutAlign="space start">
+        <div fxFlex="28%" class="form">
+            <mat-card>
+                <app-create-ticket></app-create-ticket>
+            </mat-card>
+        </div>
+
+        <div fxFlex="70%" class="list">
+            <mat-card>
+                <app-ticket-list></app-ticket-list>
+            </mat-card>
+        </div>
+    </div>
+</div>

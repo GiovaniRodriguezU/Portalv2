@@ -1,106 +1,106 @@
 <mat-sidenav-container class="container" autosize>
 
-  <!-- Sidenav -->
-  <mat-sidenav #sidenav>
-    <div *ngIf="auth.user$ | async as user" >
-      <!-- Sidenav Toolbar -->
-      <mat-toolbar color="primary">
-        <img src="assets/img/Sykes_logo.png" alt="" class="header-logo">
-      </mat-toolbar>
+    <!-- Sidenav -->
+    <mat-sidenav #sidenav>
+        <div *ngIf="auth.user$ | async as user">
+            <!-- Sidenav Toolbar -->
+            <mat-toolbar color="primary">
+                <img src="assets/img/Sykes_logo.png" alt="" class="header-logo">
+            </mat-toolbar>
 
-      <!-- Sidenav Header -->
-      <div class="sidenav-header">
-        <img [src]="user.imagePath" class="sidebar-profile">
-        <br>
-        <button mat-button [matMenuTriggerFor]="userMenu" class="user-menu-name">
+            <!-- Sidenav Header -->
+            <div class="sidenav-header">
+                <img [src]="user.imagePath" class="sidebar-profile">
+                <br>
+                <button mat-button [matMenuTriggerFor]="userMenu" class="user-menu-name">
           <span>{{user.fullName}}</span>
           <span class="spacer"></span>
           <mat-icon class="margin-left">keyboard_arrow_down</mat-icon>
         </button>
 
-        <mat-menu #userMenu="matMenu">
-          <ng-template matMenuContent>
-            <button mat-menu-item>
+                <mat-menu #userMenu="matMenu">
+                    <ng-template matMenuContent>
+                        <button mat-menu-item>
               <mat-icon>person</mat-icon>
               <span>Perfil</span>
             </button>
-            <button mat-menu-item (click)="signOut()">
+                        <button mat-menu-item (click)="signOut()">
               <mat-icon>exit_to_app</mat-icon>
               <span>Salir</span>
             </button>
-          </ng-template>
-        </mat-menu>
-      </div>
+                    </ng-template>
+                </mat-menu>
+            </div>
 
-      <!-- Sidenav menu items -->
-      <div>
-        <button mat-button color="primary" class="margin-right">
+            <!-- Sidenav menu items -->
+            <div>
+                <button mat-button color="primary" class="margin-right" [routerLink]="[ '/tickets']">
           <mat-icon>assignment</mat-icon>
           <span>Tickets</span>
         </button>
-        <button mat-button color="primary" class="margin-right">
+                <button mat-button color="primary" class="margin-right" [routerLink]="[ 'profile/:id']">
           <mat-icon>person</mat-icon>
           <span>Perfil</span>
         </button>
-        <button mat-button color="primary" class="margin-right" [routerLink]="[ '/payroll']">
+                <button mat-button color="primary" class="margin-right" [routerLink]="[ '/payroll']">
           <mat-icon>attach_money</mat-icon>
           <span>Nomina</span>
         </button>
-        <button mat-button color="primary" class="margin-right" [routerLink]="[ '/communication']">
+                <button mat-button color="primary" class="margin-right" [routerLink]="[ '/communication']">
           <mat-icon>speaker_notes</mat-icon>
           <span>Comunicaciones</span>
         </button>
-      </div>
-    </div>
-  </mat-sidenav>
+            </div>
+        </div>
+    </mat-sidenav>
 
-  <!-- Main Content -->
-  <mat-sidenav-content>
+    <!-- Main Content -->
+    <mat-sidenav-content>
 
-    <!-- Header Toolbar -->
-    <mat-toolbar color="primary" *ngIf="auth.user$ | async as user" class="toolbar-nav">
+        <!-- Header Toolbar -->
+        <mat-toolbar color="primary" *ngIf="auth.user$ | async as user" class="toolbar-nav">
 
-      <!-- sidenav toggle -->
-      <button mat-icon-button (click)="sidenav.toggle()">
+            <!-- sidenav toggle -->
+            <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <span class="spacer "></span>
+            <span class="spacer "></span>
 
-      <!-- notifications -->
-      <button mat-icon-button class="toolbar-icon">
-        <mat-icon matBadge="15" matBadgeColor="accent">notifications</mat-icon>
+            <!-- notifications -->
+            <button mat-icon-button class="toolbar-icon" [routerLink]="[ '/tickets']">
+        <mat-icon >assignment</mat-icon>
       </button>
 
-      <!-- Messages -->
-      <button mat-icon-button class="toolbar-icon">
-        <mat-icon matBadge="15" matBadgeColor="warn">mail</mat-icon>
+            <!-- Messages -->
+            <button mat-icon-button class="toolbar-icon" [routerLink]="[ '/communication']">
+        <mat-icon >home</mat-icon>
       </button>
-      <div class="toolbar-divider"></div>
+            <div class="toolbar-divider"></div>
 
-      <!-- User options -->
-      <div>
-        <button mat-icon-button mat-icon-button [matMenuTriggerFor]="appMenu">
+            <!-- User options -->
+            <div>
+                <button mat-icon-button mat-icon-button [matMenuTriggerFor]="appMenu">
           <img [src]="user.imagePath" class="img-profile">
         </button>
-        <mat-menu #appMenu="matMenu">
-          <ng-template matMenuContent>
-            <button mat-menu-item>
+                <mat-menu #appMenu="matMenu">
+                    <ng-template matMenuContent>
+                        <button mat-menu-item>
               <mat-icon>person</mat-icon>
               <span>Perfil</span>
             </button>
-            <button mat-menu-item (click)="signOut()">
+                        <button mat-menu-item (click)="signOut()">
               <mat-icon>exit_to_app</mat-icon>
               <span>Salir</span>
             </button>
-          </ng-template>
-        </mat-menu>
+                    </ng-template>
+                </mat-menu>
 
-      </div>
-    </mat-toolbar>
+            </div>
+        </mat-toolbar>
 
-    <!-- Main Router Content -->
-    <router-outlet class="main-content"></router-outlet>
+        <!-- Main Router Content -->
+        <router-outlet class="main-content"></router-outlet>
 
-  </mat-sidenav-content>
+    </mat-sidenav-content>
 
 </mat-sidenav-container>

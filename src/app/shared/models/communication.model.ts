@@ -14,4 +14,5 @@ export interface Communication {
     dislikes: [];
     dislikesCount: number;
     uploadedDate: Date;
+    user: string;
 }

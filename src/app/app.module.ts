@@ -42,11 +42,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { CommunicationsComponent } from './components/communications/communications.component';
 import { CommunicationListComponent } from './components/communications/communication-list/communication-list.component';
-import { CommunicationItemComponent } from './components/communications/communicationList/communication-item/communication-item.component';
 import { CreateCommunicationComponent } from './components/communications/create-communication/create-communication.component';
 import { PayrollComponent } from './components/finanze/payroll/payroll.component';
 import { TicketsComponent } from './components/tickets/tickets.component';
-
+import { TicketListComponent } from './components/tickets/ticket-list/ticket-list.component';
+import { CreateTicketComponent } from './components/tickets/create-ticket/create-ticket.component';
+import { TicketDetailsComponent } from './components/tickets/ticket-details/ticket-details.component';
 
 
 
@@ -58,10 +59,12 @@ import { TicketsComponent } from './components/tickets/tickets.component';
     ProfileComponent,
     CommunicationsComponent,
     CommunicationListComponent,
-    CommunicationItemComponent,
     CreateCommunicationComponent,
     PayrollComponent,
-    TicketsComponent
+    TicketsComponent,
+    TicketListComponent,
+    CreateTicketComponent,
+    TicketDetailsComponent
 
   ],
   entryComponents: [CreateCommunicationComponent],

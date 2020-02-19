@@ -1,1 +1,71 @@
-<p>profile works!</p>
+<div class="container">
+
+    <div fxLayout="row" fxLayoutAlign="space start">
+        <div fxFlex="35%" class="profile">
+            <mat-card>
+                <img mat-card-image src="https://source.unsplash.com/random/800x600">
+                <mat-card-title>NOMBRE</mat-card-title>
+                <mat-card-subtitle>PUESTO</mat-card-subtitle>
+            </mat-card>
+        </div>
+
+        <div fxFlex="65%" class="data">
+            <mat-card>
+                <mat-card-title>DATOS DE USUARIO</mat-card-title>
+                <div class="example-container" fxLayoutAlign="space-around center">
+                    <mat-form-field appearance="outline">
+                        <mat-label readonly></mat-label>
+                        <input matInput>
+                        <mat-hint>Correo Electrónico</mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label readonly></mat-label>
+                        <input matInput>
+                        <mat-hint>Role</mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label readonly></mat-label>
+                        <input matInput>
+                        <mat-hint>Badge number</mat-hint>
+                    </mat-form-field>
+                </div><br>
+                <div class="example-container" fxLayoutAlign="space-around center">
+                    <mat-form-field appearance="outline">
+                        <mat-label readonly></mat-label>
+                        <input matInput>
+                        <mat-hint>Avaya ID</mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label readonly></mat-label>
+                        <input matInput>
+                        <mat-hint>Unify id</mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label readonly></mat-label>
+                        <input matInput>
+                        <mat-hint>Five9 User</mat-hint>
+                    </mat-form-field>
+                </div><br>
+
+                <div class="example-container" fxLayoutAlign="space-around center">
+                    <mat-form-field appearance="outline">
+                        <mat-label readonly></mat-label>
+                        <input matInput>
+                        <mat-hint>Agencia</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label readonly></mat-label>
+                        <input matInput>
+                        <mat-hint>Experiencia en Call Center</mat-hint>
+                    </mat-form-field>
+                </div><br>
+
+                <mat-card-actions fxLayoutAlign="end end">
+                    <button mat-raised-button color="primary">Actualizar</button>
+                </mat-card-actions>
+
+            </mat-card>
+        </div>
+    </div>
+</div>
